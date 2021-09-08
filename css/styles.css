@@ -671,6 +671,11 @@ ul {
   border-radius: 50%;
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Portfolio */
 
 .section-portfolio {
