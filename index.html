@@ -389,11 +389,16 @@
                         </li>
                     </ul>
                 </div>
-                <form action="#" class="contact-form">
-                    <label for="email">Подпишитесь на рассылку</label>
-                    <div class="contact-form-mail">
-                        <input type="email" name="email">
-                        <button type="submit">Подписываться</button>
+                <form class="form-mailing">
+                    <label class="contact-form-title" for="email">Подпишитесь на рассылку
+                    </label>
+                    <div class="contact-form">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                        <button class="contact-form-btn" type="submit">Подписаться
+                            <svg class="contact-form-icon">
+                                <use href="./images/icons.svg#send"></use>
+                            </svg>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -406,40 +411,43 @@
                     <use href="./images/icons.svg#close"></use>
                 </svg>
             </button>
-            <form action="#">
-                <legend>Оставьте свои данные, мы вам перезвоним</legend>
+            <form class="form">
+                <legend class="form-title">Оставьте свои данные, мы вам перезвоним</legend>
                 <div class="form-field">
-                    <label for="">Имя
-                        <input type="text">
-                    </label>
+                    <label class="form-label">Имя</label>
+                    <svg class="form-field-icon">
+                        <use href="./images/icons.svg#person"></use>
+                    </svg>
+                    <input class="form-input" type="text">
                 </div>
 
                 <div class="form-field">
-                    <label for="">Телефон
-                        <input type="tel">
-                    </label>
+                    <label class="form-label" for="">Телефон</label>
+                    <svg class="form-field-icon">
+                        <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                    <input class="form-input" type="tel">
                 </div>
 
                 <div class="form-field">
-                    <label for="">Почта
-                        <input type="email">
-                    </label>
+                    <label class="form-label" for="">Почта</label>
+                    <svg class="form-field-icon">
+                        <use href="./images/icons.svg#email"></use>
+                    </svg>
+                    <input class="form-input" type="email">
                 </div>
 
                 <div class="form-field">
-                    <label for="">Комментарий
-                        <textarea name="" id="" rows="10"></textarea>
-                    </label>
+                    <label class="form-label" for="">Комментарий</label>
+                    <textarea class="form-field-comment" name="" id="" rows="7"></textarea>
                 </div>
 
-                <div class="form-field">
-                    <label for="">
-                        <input type="checkbox">
-                        Соглашаюсь с рассылкой и принимаю Условия договора
-                    </label>
+                <div class="form-field-checkbox">
+                    <input class="form-input" type="checkbox">
+                    <label for="">Соглашаюсь с рассылкой и принимаю Условия договора</label>
                 </div>
 
-                <button type="submit">Оставить заявку</button>
+                <button class="form-field-btn" type="submit">Отправить</button>
             </form>
         </div>
     </div>
