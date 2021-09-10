@@ -625,7 +625,7 @@ ul {
 }
 
 .form-mailing {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .contact-form-title {
@@ -646,7 +646,7 @@ ul {
   display: flex;
 }
 
-.contact-form input {
+.contact-form-input {
   margin: 0;
   padding: 15px 16px;
   width: 358px;
@@ -654,8 +654,24 @@ ul {
 
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
+
+  transition: drop-shadow 250ms var(--timing-function);
+}
+
+.contact-form-input:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.contact-form-input::placeholder {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .contact-form-btn {
@@ -678,11 +694,15 @@ ul {
   background-color: var(--accent-color);
   border: currentColor;
   border-radius: 4px;
+
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.contact-form-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form-icon {
-  width: 24px;
-  height: 24px;
   margin-left: 10px;
 }
 
@@ -731,6 +751,8 @@ ul {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .modal-close-btn:hover {
@@ -739,59 +761,148 @@ ul {
 
 /* Form */
 
-.form {
-  padding: 0 40px 40px 40px;
+.modal-form {
+  padding: 0 32px 32px 32px;
 }
 
-.form-title {
+.modal-title {
+  display: block;
   margin-bottom: 12px;
 
   font-family: 'Roboto';
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: 18px;
+  line-height: 1.28;
   text-align: center;
   letter-spacing: 0.03em;
-
-  color: #212121;
+  color: var(--title-text-color);
 }
 
-.form-field {
-  display: flex;
-  flex-direction: column;
+.modal-form-field {
+  margin-bottom: 15px;
 }
 
-.form-label {
+.modal-form-label {
+  display: block;
   margin-bottom: 4px;
 
+  font-family: 'Roboto';
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
 
-.form-input {
-  height: 40px;
-  margin-bottom: 10px;
+.input-wrap {
+  display: block;
+  position: relative;
+}
 
+.modal-form-input {
+  width: 100%;
+  height: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 40px;
+  outline: none;
+
+  transition: border 250ms var(--timing-function);
 }
 
-.form-field-icon {
-  width: 18px;
-  height: 18px;
+.modal-form-input:focus {
+  border: 1px solid #2196f3;
 }
 
-.form-field-comment {
-  border: 1px solid rgba(33, 33, 33, 0.2);
+.modal-form-input:focus + .modal-form-icon {
+  fill: #2196f3;
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--title-text-color);
+
+  transition: fill 250ms var(--timing-function);
+}
+
+.modal-comment {
+  width: 100%;
+  height: 130px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(157, 164, 189, 0.4);
   border-radius: 4px;
+  resize: none;
+  outline: none;
+
+  transition: border 250ms var(--timing-function);
 }
 
-.form-field-checkbox {
+.modal-comment:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.modal-comment::placeholder {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-field.checkbox {
+  display: flex;
+  text-align: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
-.form-field-btn {
+.check-label {
+  display: flex;
+  align-items: center;
+
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.icon-check {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:checked + .check-label > .icon-check {
+  background: var(--accent-color);
+  border: none;
+}
+
+.modal-form-link {
+  display: block;
+  margin-left: 4px;
+
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
+}
+
+.form-btn {
+  margin: 0 auto;
+  display: block;
   width: 200px;
   height: 50px;
 
@@ -808,6 +919,14 @@ ul {
   background-color: var(--accent-color);
   border: currentColor;
   border-radius: 4px;
+  outline: none;
+
+  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+}
+
+.form-btn:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Portfolio */
