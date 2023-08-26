@@ -1,3 +1,92 @@
 :root {
-  --main-color: #2a2a2a;
+  --main-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --main-bg-color: #fff;
+  --secondary-bg-color: #f5f4fa;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --main-font-size: 14px;
+  --main-line-height: 1.71;
+  --auth-nav-text-color: rgba(255, 255, 255, 0.6);
+  --card-set-gap: 30px;
+  --fill-color: #afb1b8;
+  --placeholder-text-color: rgba(117, 117, 117, 0.5);
+  --transition-duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.button {
+  padding: 6px 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bg-color {
+  background-color: var(--secondary-bg-color);
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
